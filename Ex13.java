@@ -1,0 +1,63 @@
+class Ex13 {
+    public static void main(String[] args) {
+        int[] data = {
+            3, 4, 5, 6, 2, 4, 1, 5, 7, 8,
+            5, 0, 8, 1, 9, 1, 7, 8, 1, 7,
+            7, 3, 4, 3, 6, 2, 3, 9, 4, 8,
+            9, 2, 8, 5, 0, 3, 4, 2, 7, 1
+        };
+        if (args.length > 0) {
+            data = new int[args.length];
+            for (int i = 0; i < args.length; i++)
+                data[i] = Integer.valueOf(args[i]);
+        }
+        int min =data[0];
+        int max = data[0];
+        int i;
+        double sum=0;
+        double ave =0;
+
+        if(args.length > 0){
+             for(i=0;i<args.length;i++){
+                 sum+=data[i];
+                 if(max<=data[i]){
+                max = data[i];
+            }
+                else if(min>=data[i]){
+                    min = data[i];
+                }
+             }
+
+        }
+
+        else{
+          for(i=0;i<40;i++){
+            sum+=data[i];
+            if(max<=data[i]){
+                max = data[i];
+            }
+                else if(min>=data[i]){
+                    min = data[i];
+                }
+            
+           }
+        }
+
+       if (args.length > 0){
+         ave +=sum/args.length; 
+       }else {
+        ave +=sum/40;
+       }
+	
+	if (args.length > 0){
+         System.out.println("maximum: " + max);
+          System.out.println("minimum: " + min);
+        System.out.println("average: " + ave);
+	}else{
+	 System.out.println("maximum: " + max);
+          System.out.println("minimum: " + min);
+        System.out.println("average: " + ave);
+         }
+
+    }
+}

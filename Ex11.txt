@@ -1,0 +1,40 @@
+B184654 白石望
+
+class Ex11 {
+    public static void main(String[] args) {
+        double height = 170.0; 
+        double weight = 60.0; 
+        if (args.length == 2) {
+            height = Double.valueOf(args[0]);
+            weight = Double.valueOf(args[1]);
+        }
+        System.out.println("身長 (cm): " + height);
+        System.out.println("体重 (kg): " + weight);
+
+       
+      
+        double bmi = weight/(height*height);
+		bmi=bmi*10000;
+        System.out.println("BMI: " + bmi);
+    }
+}
+
+
+実行
+
+白石望@DESKTOP-DU1O254 ~/programing4
+$ java Ex11
+身長 (cm): 170.0
+体重 (kg): 60.0
+BMI: 20.761245674740486
+
+白石望@DESKTOP-DU1O254 ~/programing4
+$ javac Ex11.java
+白石望@DESKTOP-DU1O254 ~/programing4
+$ java Ex11 160 60
+身長 (cm): 160.0
+体重 (kg): 60.0
+BMI: 23.4375
+
+白石望@DESKTOP-DU1O254 ~/programing4
+$
